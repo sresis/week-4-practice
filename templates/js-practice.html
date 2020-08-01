@@ -88,14 +88,24 @@
 
 <script>
   "use strict";
-  const numberArray = [];
+  var numberArray = [];
 
-  const multsForm = document.querySelector('#max');
+  const multsForm = document.querySelector('#multiplying-form');
+  var multsOf = document.getElementById("mults-of");
+  var upTo = document.getElementById("max");
+  const goButton = document.querySelector('#multiply-btn');
 
-  multsForm.addEventListener('submit', () => {
-    const selectedNum = document.querySelector('input[name="up-to"]');
-    console.log(selectedNum);
-    alert('hi');
+  goButton.addEventListener('click', () => {
+    event.preventDefault();
+    var i = 0;
+    while (i < upTo.value) {
+      if (i % multsOf.value === 0) {
+        numberArray.push(i);
+      }
+      i += 1;
+    }
+    console.log(numberArray);
+    numberArray = [];
 
   });
 
