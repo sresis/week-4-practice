@@ -95,7 +95,8 @@
   var upTo = document.getElementById("max");
   const goButton = document.querySelector('#multiply-btn');
 
-  goButton.addEventListener('click', () => {
+
+  multsForm.addEventListener('submit', () => {
     event.preventDefault();
     var i = 0;
     while (i < upTo.value) {
