@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Practice JavaScript</title>
   <link rel="stylesheet" href="static/styles.css">
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -62,7 +66,7 @@
 </p>
 
 <fieldset>
-  <form id="multiplying-form" action="/nope">
+  <form id="multiplying-form" >
     I want all multiples of
     <select id="mults-of" name="mults-of">
       <option value="2">2</option>
@@ -84,6 +88,16 @@
 
 <script>
   "use strict";
+  const numberArray = [];
+
+  const multsForm = document.querySelector('#max');
+
+  multsForm.addEventListener('submit', () => {
+    const selectedNum = document.querySelector('input[name="up-to"]');
+    console.log(selectedNum);
+    alert('hi');
+
+  });
 
   // TODO: replace this with your code
 </script>
@@ -116,7 +130,11 @@
 <script>
   "use strict";
 
-  // TODO: replace this with your code
+  $('.find-me').on('click', () => {
+    alert('alert powered by jQuery!');
+
+  })
+
 </script>
 
 <div class="hint">
